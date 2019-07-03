@@ -1,8 +1,16 @@
 <!doctype html>
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
+    <meta charset="utf-8">
+    <title>Ahoy!</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104710479-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-104710479-2');
+    </script>
 </head>
 
 <body>
@@ -13,7 +21,7 @@
 
     <button onclick="meme()"> aYe AyE cAptAIN! </button> <br>
 
-    <img src="squarepants.jpg" alt="barnacles!"> <br>
+    <img src="squarepants.jpg" alt="barnacles!" id="pic" style="display:none"> <br>
 
     aND yOU SHaLl recEIve <br>
     <textarea type="text" id="out" rows="5" cols="20" wrap="soft"> </textarea> <br>
@@ -32,8 +40,8 @@
                     memeText += inp[i].toUpperCase();
                 }
             }
-            var out = document.getElementById("out");
-            out.value = memeText;
+            document.getElementById("out").value = memeText;
+            document.getElementById("pic").style.display = "inline";
         }
     </script>
 </body>
