@@ -15,18 +15,23 @@
 
 <body>
     <h3>hIgH LEVeL aLGoRiThMIc sTriNg manIpUlatiON</h3>
-
+    
     aSk <br> 
-    <textarea type="text" id="in" rows="5" cols="20" wrap="soft"> </textarea> <br>
+    <textarea type="text" id="in" rows="5" cols="20" wrap="soft"></textarea> <br>
 
     <button onclick="meme()"> aYe AyE cAptAIN! </button> <br>
 
     <img src="squarepants.jpg" alt="barnacles!" id="pic" style="display:none"> <br>
 
     aND yOU SHaLl recEIve <br>
-    <textarea type="text" id="out" rows="5" cols="20" wrap="soft"> </textarea> <br>
+    <textarea type="text" id="out" rows="5" cols="20" wrap="soft"></textarea> <br>
 
-    <a href="https://www.youtube.com/watch?v=uy2XTN5gdzU">Works Cited </a>
+    <a href="https://www.youtube.com/watch?v=uy2XTN5gdzU">Works Cited </a> <br>
+
+    (this is for an intellectual data analytics proj)
+    <!--UTM links-->
+    <!--isaacna.com/squarepants?utm_source=Instagram&utm_medium=profile%20link&utm_campaign=squarepants-->
+    <!--https://bit.ly/2LCg9eD-->
 
     <script>
         function meme() {
@@ -41,7 +46,11 @@
                 }
             }
             document.getElementById("out").value = memeText;
-            document.getElementById("pic").style.display = "inline";
+            
+            inp = inp.replace(/\s/g,'');
+            if(inp != "" && inp !=null) {
+                document.getElementById("pic").style.display = "inline";
+            }
         }
     </script>
 </body>
